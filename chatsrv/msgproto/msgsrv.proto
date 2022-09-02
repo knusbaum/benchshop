@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package benchshop.msgproto;
+
+option go_package = "github.com/knusbaum/benchshop/msgproto";
+
+message OutMessage {
+	int64 timestamp = 1;
+	string fromnick = 2;
+	string content = 3;
+}
+
+message InMessage {
+	string channame = 1;
+	string fromnick = 2;
+	string content = 3;
+}
+
+message Channel {
+	string name = 1;
+}
+
+message SendResponse {}
+
+service Chat {
+	rpc Send(InMessage) returns (SendResponse) {}
+	rpc Join(Channel) returns (stream OutMessage) {}
+}
