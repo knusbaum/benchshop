@@ -1,0 +1,17 @@
+goos: linux
+goarch: amd64
+pkg: github.com/knusbaum/benchshop/microbench
+cpu: 11th Gen Intel(R) Core(TM) i9-11950H @ 2.60GHz
+BenchmarkQuicksort
+BenchmarkQuicksort-16    	   57496	    106143 ns/op	  154924 B/op	    3004 allocs/op
+BenchmarkQuicksort-16    	   56432	    107017 ns/op	  154973 B/op	    3006 allocs/op
+BenchmarkQuicksort-16    	   54632	    110750 ns/op	  154947 B/op	    3005 allocs/op
+BenchmarkQuicksort-16    	   54886	    109673 ns/op	  154972 B/op	    3006 allocs/op
+BenchmarkQuicksort-16    	   55267	    108302 ns/op	  154875 B/op	    3002 allocs/op
+BenchmarkQuicksort-16    	   55264	    107634 ns/op	  154827 B/op	    3000 allocs/op
+BenchmarkQuicksort-16    	   55624	    107814 ns/op	  154947 B/op	    3005 allocs/op
+BenchmarkQuicksort-16    	   55767	    107717 ns/op	  154851 B/op	    3001 allocs/op
+BenchmarkQuicksort-16    	   56104	    107149 ns/op	  154952 B/op	    3005 allocs/op
+BenchmarkQuicksort-16    	   55456	    107568 ns/op	  154874 B/op	    3002 allocs/op
+PASS
+ok  	github.com/knusbaum/benchshop/microbench	82.563s

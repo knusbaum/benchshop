@@ -22,4 +22,4 @@ func BenchmarkQuicksort(b *testing.B) {
 	}
 }
 
-// go test -v -run XXX -bench BenchmarkQuicksort -benchmem -cpuprofile cpu.pprof -memprofile mem.pprof -benchtime 20s
+// go test -v -run XXX -bench BenchmarkQuicksort -benchmem -cpuprofile cpu.pprof -memprofile mem.pprof -count 10 -benchtime 5s | tee first.txt
