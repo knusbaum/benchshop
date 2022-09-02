@@ -16,18 +16,19 @@ func mergesort(s []int) []int {
 	s2 := mergesort(s[l:])
 	var ret []int
 	for {
-		if len(s1) == 0 {
-			ret = append(ret, s2...)
-			break
-		} else if len(s2) == 0 {
-			ret = append(ret, s1...)
-			break
-		}
 		if s1[0] < s2[0] {
 			ret = append(ret, s1[0])
+			if len(s1) == 1 {
+				ret = append(ret, s2...)
+				break
+			}
 			s1 = s1[1:]
 		} else {
 			ret = append(ret, s2[0])
+			if len(s2) == 1 {
+				ret = append(ret, s1...)
+				break
+			}
 			s2 = s2[1:]
 		}
 	}
