@@ -6,38 +6,6 @@ import (
 	"time"
 )
 
-// Partition chooses a pivot and puts all items < pivot before the pivot and all items > pivot
-// after pivot. It then returns pivot.
-func partition(s []int, start, end int) int {
-	pivot := s[end]
-
-	i := start - 1
-
-	for j := start; j < end; j++ {
-		if s[j] <= pivot {
-			i += 1
-			s[i], s[j] = s[j], s[i]
-		}
-	}
-	i += 1
-	s[i], s[end] = s[end], s[i]
-	return i
-}
-
-func quicksortr(s []int, start, end int) {
-	if start >= end || start < 0 {
-		return
-	}
-
-	p := partition(s, start, end)
-	quicksortr(s, start, p-1)
-	quicksortr(s, p+1, end)
-}
-
-func quicksort(s []int) {
-	quicksortr(s, 0, len(s)-1)
-}
-
 func mergesort(s []int) []int {
 	if len(s) == 1 {
 		return s

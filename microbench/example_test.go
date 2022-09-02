@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func BenchmarkQuicksort(b *testing.B) {
+func BenchmarkMergesort(b *testing.B) {
 	rand.Seed(time.Now().UnixNano())
 	var ints []int
 	for i := 0; i < 1000; i++ {
