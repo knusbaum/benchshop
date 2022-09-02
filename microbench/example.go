@@ -14,7 +14,7 @@ func mergesort(s []int) []int {
 	l := len(s) / 2
 	s1 := mergesort(s[:l])
 	s2 := mergesort(s[l:])
-	var ret []int
+	ret := make([]int, 0, len(s1)+len(s2))
 	for {
 		if s1[0] < s2[0] {
 			ret = append(ret, s1[0])

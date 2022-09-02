@@ -22,5 +22,4 @@ func BenchmarkMergesort(b *testing.B) {
 	}
 }
 
-// go test -v -run XXX -bench BenchmarkQuicksort -benchmem -cpuprofile cpu.pprof -memprofile mem.pprof -count 10 -benchtime 5s | tee second.txt
-
+// go test -v -run XXX -bench BenchmarkQuicksort -benchmem -cpuprofile cpu.pprof -memprofile mem.pprof -count 10 -benchtime 5s | tee third.txt
